@@ -1,7 +1,21 @@
 import StatsCard from "./components/StatsCard";
 import HourlyForecastCard from "./components/HourlyForecastCard";
 import DailyForecastCard from "./components/DailyForecastCard";
+import { useState } from "react";
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
 function App() {
+  const [selectedDay, setSelectedDay] = useState("Monday");
+  const [showDays, setShowDays] = useState(false);
+
+
   return (
     <>
       <div className="h-[98vh] flex flex-col items-center justify-between mb-20  ">
@@ -44,7 +58,12 @@ function App() {
                 <img
                   src="images/bg-today-small.svg"
                   alt="bg small"
-                  className="w-full absolute inset-0 z-1"
+                  className="w-full absolute inset-0 z-1 md:hidden"
+                />
+                <img
+                  src="images/bg-today-large.svg"
+                  alt="bg small"
+                  className="w-full absolute inset-0 z-1 hidden md:block"
                 />
                 {/* text */}
                 <div className="w-full z-10 absolute inset-0 h-full bg-transparent rounded-2xl flex flex-col justify-center gap-y-5 lg:flex-row lg:items-center lg:gap-x-10 lg:gap-y-0 lg:justify-between">
@@ -101,9 +120,37 @@ function App() {
                 <h2 className="text-white/95 text-1.5xl font-medium tracking-wide ">
                   Hourly forecast
                 </h2>
-                <div className="flex bg-[#2F2F49] p-2 rounded-lg text-neutral-200 gap-1.5 items-center justify-between">
-                  <p className="text-md text-neutral-400">Tuesday</p>
-                  <img src="images/icon-dropdown.svg" alt="dropdown icon" />
+                <div className="relative inline-block">
+                  <button
+                    className=" bg-[#2F2F49] text-neutral-200 rounded-lg px-4 py-2 pr-10 w-full"
+                    onClick={() => setShowDays(!showDays)}
+                  >
+                    {selectedDay}
+                    <img
+                      src="images/icon-dropdown.svg"
+                      alt="dropdown icon"
+                      className="pointer-events-none absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 cursor-pointer"
+                    />
+                  </button>
+
+                  <div
+                    className={`bg-[#25253F] absolute right-0 top-12 z-5 w-50  border border-[#3d3d60] rounded-md ${
+                      showDays ? "inline-block" : "hidden"
+                    }`}
+                  >
+                    {days.map((day, index) => (
+                      <button
+                        key={index}
+                        className="text-neutral-400 p-3 w-full  hover:bg-[#2F2F49] cursor-pointer flex items-start "
+                        onClick={() => {
+                          setSelectedDay(day);
+                          setShowDays(!showDays);
+                        }}
+                      >
+                        {day}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="w-full flex flex-col gap-y-3.5 lg:gap-y-4 mb-4 lg:mb-0">
