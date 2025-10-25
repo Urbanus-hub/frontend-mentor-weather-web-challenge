@@ -1,38 +1,41 @@
 import StatsCard from "./components/StatsCard";
 import ForecastCard from "./components/ForecastCard";
+import DailyForecastCard from "./components/DailyForecastCard";
 function App() {
   return (
     <>
       <div className="h-[98vh] flex-col items-center justify-around mb-20 overflow-y-scroll ">
-        <header className="full  mx-auto h-[7vh] flex items-center justify-between mb-10 ">
+        <header className="w-full  mx-auto h-[7vh] flex items-center justify-between mb-10 lg:w-[80%] ">
           <img
             src="images/logo.svg"
             alt="location icon"
-            className="w-38 h-38"
+            className="w-38 h-38 lg:w-48 lg:h-48"
           />
 
-          <div className="flex bg-[#252540] p-2 rounded-lg text-white gap-1.5 items-center justify-between">
+          <div className="flex bg-[#252540] p-2 rounded-lg text-white gap-1.5 items-center justify-between  ">
             <img src="images/icon-units.svg" alt="unit icon" />
             <p className="text-sm">Units</p>
             <img src="images/icon-dropdown.svg" alt="dropdown icon" />
           </div>
         </header>
         <main className="w-full mx-auto min-h-[70vh]  lg:h-[80vh] ">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center w-full lg:w-[80%] mx-auto ">
             <h1 className="text-5xl text-white  mb-6 text-center px-5 tracking-wider leading-14">
               How's the sky looking today?
             </h1>
-            <div className="w-full h-13 flex  items-center justify-between bg-[#252540] rounded-xl py-4 px-7 gap-x-3.5 mb-3.5">
-              <img src="images/icon-search.svg" alt="" className="w-5 h-5" />
-              <input
-                type="text"
-                className="w-[90%] h-11 font-sans text-white outline-none"
-                placeholder="Search for a place..."
-              />
+            <div>
+              <div className="w-full h-13 flex  items-center justify-between bg-[#252540] rounded-xl py-4 px-7 gap-x-3.5 mb-3.5 lg:w-[85%] lg:mx-auto">
+                <img src="images/icon-search.svg" alt="" className="w-5 h-5" />
+                <input
+                  type="text"
+                  className="w-[90%] h-11 font-sans text-white outline-none"
+                  placeholder="Search for a place..."
+                />
+              </div>
+              <button className="w-full h-13 text-white bg-[#4657D9] rounded-xl flex items-center justify-center lg:hidden">
+                Search
+              </button>
             </div>
-            <button className="w-full h-13 text-white bg-[#4657D9] rounded-xl flex items-center justify-center">
-              Search
-            </button>
           </div>
           {/* results */}
           <div className="mt-10 flex flex-col w-full">
@@ -97,24 +100,21 @@ function App() {
                   Hourly forecast
                 </h2>
                 <div className="flex bg-[#2F2F49] p-2 rounded-lg text-neutral-200 gap-1.5 items-center justify-between">
-
                   <p className="text-md text-neutral-400">Tuesday</p>
                   <img src="images/icon-dropdown.svg" alt="dropdown icon" />
                 </div>
-
               </div>
-              <div className="w-full flex flex-col">
-                <div className="w-full ">
-                  <div>
-                    <img src="" alt="" />
-                    h1
-                  </div>
-
-                </div>
-
+              <div className="w-full flex flex-col gap-y-3.5 mb-4">
+                {/* daily cards */}
+                <DailyForecastCard />
+                <DailyForecastCard />
+                <DailyForecastCard />
+                <DailyForecastCard />
+                <DailyForecastCard />
+                <DailyForecastCard />
+                <DailyForecastCard />
+                <DailyForecastCard />
               </div>
-
-
             </div>
           </div>
         </main>
