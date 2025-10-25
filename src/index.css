@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,700&display=swap");
 
 @import "tailwindcss";
 
-
-
-@theme{
---font-sans: 'DM Sans', sans-serif;
---font-display: 'Bricolage Grotesque', sans-serif;
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Bricolage Grotesque", sans-serif;
   --neutral-900: hsl(243, 96%, 9%);
   --neutral-800: hsl(243, 27%, 20%);
   --neutral-700: hsl(243, 23%, 24%);
@@ -18,15 +16,14 @@
   --orange-500: hsl(28, 100%, 52%);
   --blue-500: hsl(233, 67%, 56%);
   --blue-700: hsl(248, 70%, 36%);
-
 }
 
 @layer base {
-  body{
-    @apply  font-sans bg-[#02012B] min-h-screen flex flex-col px-4 py-8 text-[18px];
+  body {
+    @apply font-sans bg-[#02012B] min-w-screen h-auto  px-4 py-8 text-[18px] overflow-y-scroll;
   }
-  h1{
-    @apply font-display text-white ;
+  h1 {
+    @apply font-display text-white;
   }
   .attribution {
     @apply text-xs text-center;
@@ -34,8 +31,7 @@
   .attribution a {
     @apply text-blue-600;
   }
-  
 }
-::-webkit-scrollbar{
-  display:none;
+::-webkit-scrollbar {
+  display: none;
 }

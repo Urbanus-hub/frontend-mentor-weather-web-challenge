@@ -1,15 +1,18 @@
-import React from "react";
+import React from 'react'
 
-const DailyForecasts = () => {
+const DailyForecastCard = () => {
   return (
-    <div className="w-full flex items-center justify-between px-4 bg-[#2F2F49] rounded-md border border-[#3d3d60]">
-      <div className="flex items-center py-2 ">
-        <img src="images/icon-sunny.webp" alt="" className="w-12 h-12 " />
-        <h2 className="text-neutral-200 text-lg font-medium">3 PM</h2>
-      </div>
-      <h2 className="text-neutral-400 text-lg font-medium">68°</h2>
-    </div>
-  );
-};
+    <div className="w-[31%] h-[26vh] bg-[#252540] rounded-xl flex flex-col py-4 px-2 gap-2 justify-center items-center  border-2 border-[#343457] lg:w-[15%] ">
+                <p className="text-neutral-400 text-md font-medium">
+                  Tue
+                </p>
+                <img src="/images/icon-snow.webp" alt="weather-icon"  className="h-20 w-20 "/>
 
-export default DailyForecasts;
+              
+                  <div className="text-neutral-400 flex flex-row justify-around w-full "> <span>77°</span> <span>55°</span></div>
+                
+              </div>
+  )
+}
+
+export default DailyForecastCard
