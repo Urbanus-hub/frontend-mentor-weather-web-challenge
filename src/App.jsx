@@ -443,7 +443,7 @@ function App() {
                 <img
                   src="images/bg-today-large.svg"
                   alt="bg small"
-                  className="w-full absolute inset-0 z-1 hidden md:block"
+                  className="w-full absolute inset-0 z-1 hidden md:block "
                 />
 
                 {/* text */}
@@ -628,7 +628,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-full flex flex-col gap-y-3.5 lg:gap-y-4 mb-4 lg:mb-0 overflow-y-scroll lg:h-[130vh]">
+              <div className="w-full flex flex-col gap-y-3.5 h-screen  lg:gap-y-4 mb-4 lg:mb-0 overflow-y-scroll lg:h-[130vh]">
                 {/* hourly cards */}
                 {loading ? (
                   // Show skeleton cards while loading
