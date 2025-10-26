@@ -43,8 +43,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://frontend-mentor-weather-web-challen.vercel.app/)
-- Live Site URL: [Add live site URL here](https://frontend-mentor-weather-web-challen.vercel.app/)
+- Solution URL: [vercel](https://frontend-mentor-weather-web-challen.vercel.app/)
+- Live Site URL: [vercel](https://frontend-mentor-weather-web-challen.vercel.app/)
 
 ## My process
 
