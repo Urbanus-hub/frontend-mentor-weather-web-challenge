@@ -135,7 +135,7 @@ function App() {
     }
 
     // Default fallback
-    return isDay ? "images/icon-sunny.webp" : "images/icon-sunny.webp";
+    return isDay ? "images/icon-sunny.webp" : "images/icon-moon.svg";
   };
 
   // Function to format time
