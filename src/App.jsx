@@ -432,7 +432,7 @@ function App() {
           </div>
 
           {/* results */}
-          <div className="mt-10 flex flex-col w-full lg:mx-auto lg:py-10 lg:flex-row lg:gap-x-10 lg:justify-center lg:px-0 lg:h-[150vh] lg:overflow-scroll">
+          <div className="mt-10 flex flex-col w-full lg:mx-auto lg:py-10 lg:flex-row lg:gap-x-10 lg:justify-center lg:px-0 lg:h-[150vh] lg:overflow-scroll" tabindex="0">
             <div className="lg:w-8/12 lg:flex-col lg:items-center lg:justify-center">
               <div className="w-full h-[45vh] relative flex flex-col items-center justify-center rounded-2xl overflow-hidden">
                 <img
@@ -628,7 +628,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-full flex flex-col gap-y-3.5 h-screen  lg:gap-y-4 mb-4 lg:mb-0 overflow-y-scroll lg:h-[130vh]">
+              <div className="w-full flex flex-col gap-y-3.5 h-screen  lg:gap-y-4 mb-4 lg:mb-0 overflow-y-scroll lg:h-[130vh]" tabindex="0">
                 {/* hourly cards */}
                 {loading ? (
                   // Show skeleton cards while loading
