@@ -432,22 +432,27 @@ function App() {
           </div>
 
           {/* results */}
-          <div className="mt-10 flex flex-col w-full lg:mx-auto lg:py-10 lg:flex-row lg:gap-x-10 lg:justify-center lg:px-0 lg:h-[150vh] lg:overflow-scroll" tabindex="0">
-            <div className="lg:w-8/12 lg:flex-col lg:items-center lg:justify-center">
+          <div
+            className="mt-10 flex flex-col w-full lg:mx-auto lg:py-6 lg:flex-row lg:gap-x-10 lg:justify-center lg:px-0 lg:h-[115vh] lg:overflow-scroll"
+            tabindex="0"
+          >
+            <div className="lg:w-8/12 lg:flex-col lg:items-center lg:justify-center ">
               <div className="w-full h-[45vh] relative flex flex-col items-center justify-center rounded-2xl overflow-hidden">
                 <img
                   src="images/bg-today-small.svg"
                   alt="bg small"
                   className="w-full absolute inset-0 z-1 md:hidden"
                 />
-                <img
-                  src="images/bg-today-large.svg"
-                  alt="bg small"
-                  className="w-full absolute inset-0 z-1 hidden md:block "
-                />
+                <div className="w-full h-full absolute top-0 z-1 hidden md:flex md:items-center">
+                  <img
+                    src="images/bg-today-large.svg"
+                    alt="bg small"
+                    className="w-full h-full object-cover "
+                  />
+                </div>
 
                 {/* text */}
-                <div className="w-full z-10 absolute inset-0 h-full bg-transparent rounded-2xl flex flex-col justify-center gap-y-5 lg:flex-row lg:items-center lg:gap-x-10 lg:gap-y-0 lg:justify-between">
+                <div className="w-full z-10 absolute inset-0 h-full bg-transparent rounded-2xl flex flex-col justify-center gap-y-5 lg:flex-row lg:items-center lg:gap-x-10 lg:gap-y-0 lg:justify-between ">
                   <div className="w-full flex flex-col items-center gap-y-3">
                     <h2 className="text-white text-3xl font-bold tracking-wide">
                       {selectedLocation
@@ -628,7 +633,10 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-full flex flex-col gap-y-3.5 h-screen  lg:gap-y-4 mb-4 lg:mb-0 overflow-y-scroll lg:h-[130vh]" tabindex="0">
+              <div
+                className="w-full flex flex-col gap-y-3.5 h-screen  lg:gap-y-4 mb-4 lg:mb-0 overflow-y-scroll lg:h-[130vh]"
+                tabindex="0"
+              >
                 {/* hourly cards */}
                 {loading ? (
                   // Show skeleton cards while loading

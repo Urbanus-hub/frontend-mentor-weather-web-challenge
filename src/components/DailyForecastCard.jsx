@@ -21,7 +21,7 @@ const DailyForecastCard = ({
   }
 
   return (
-    <div className="w-[31%] h-[26vh] bg-[#252540] rounded-xl flex flex-col py-4 px-2 gap-2 justify-center items-center border-2 border-[#343457] lg:w-[15%] hover:border-[#4657D9] transition-all duration-200">
+    <div className="w-[30%] h-[26vh] bg-[#252540] rounded-xl flex flex-col py-4 px-2 gap-2 justify-center items-center border-2 border-[#343457] lg:w-[13%] hover:border-[#4657D9] transition-all duration-200">
       <p className="text-neutral-400 text-md font-medium">
         {day}
       </p>
